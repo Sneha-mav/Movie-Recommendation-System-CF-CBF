@@ -11,9 +11,9 @@ load_dotenv()
 
 # Load Models and Data 
 
-movies = pickle.load(open("models\movies.pkl", "rb"))
-similarity = pickle.load(open('models\similarity.pkl', 'rb'))
-cf = pickle.load(open("models\cfmodel.pkl", "rb"))
+movies = pickle.load(open("models/movies.pkl", "rb"))
+similarity = pickle.load(open('models/similarity.pkl', 'rb'))
+cf = pickle.load(open("models/cfmodel.pkl", "rb"))
 
 cf_knn_model = cf['cf_knn_model']
 user_movie_matrix = cf['user_movie_matrix']
