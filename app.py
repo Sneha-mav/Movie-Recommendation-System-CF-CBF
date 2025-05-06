@@ -114,7 +114,11 @@ with tab1:
         for i in range(5):
             with cols[i]:
                 st.text(titles[i] if i < len(titles) else "N/A")
-                st.image(posters[i] if i < len(posters) else None)
+                if i < len(posters) and posters[i]:
+                    st.image(posters[i])
+                else:
+                    st.warning("Poster not available")
+
 
 # Tab2
 with tab2:
@@ -128,5 +132,9 @@ with tab2:
         for i in range(5):
             with cols[i]:
                 st.text(titles_cf[i] if i < len(titles_cf) else "No recommendation")
-                st.image(posters_cf[i] if i < len(posters_cf) else None)
+                if i < len(posters_cf) and posters_cf[i]:
+                    st.image(posters_cf[i])
+                else:
+                    st.warning("Poster not available")
+
 
